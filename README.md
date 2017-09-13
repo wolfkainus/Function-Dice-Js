@@ -1,2 +1,2 @@
-# Function-Dice-Js
+# Random-RollDice-Js
 Simple Function DiceRoll Js
