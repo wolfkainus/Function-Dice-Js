@@ -19,8 +19,6 @@ while (contador < numeroDados) {
 };
 document.write("Estos son tus numeros " + Resultados + "<br>");
 
-document.write("contador numero de dados " + contadorNumeroDados + "<br>");
-
 contadorNumeroDados.forEach(function(contadorNumeroDado) {
     Resultados.forEach(function(Resultado) {
         if (Resultado == contadorNumeroDado) {
