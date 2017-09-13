@@ -1,33 +1,32 @@
-var contador = 0;
-var Resultados = [];
-var contadorNumeroDados = [];
-var conteo = 0;
-var conteoActual = 0;
-var resultadoActual = 0;
+var counter = 0;
+var results = [];
+var counterNumberDices = [];
+var currentCounter = 0;
+var currentResult = 0;
 
-var carasDado = prompt("De cuantas Caras quieres tus Dados (6, 20, etc..)?");
-var carasDado = parseInt(carasDado);
-var numeroDados = prompt("Cuantos Dados quieres lanzar?");
-var numeroDados = parseInt(numeroDados);
+var diceFace = prompt("De cuantas Caras quieres tus Dados (6, 20, etc..)?");
+var diceFace = parseInt(diceFace);
+var diceNumber = prompt("Cuantos Dados quieres lanzar?");
+var diceNumber = parseInt(diceNumber);
 
-while (contador < numeroDados) {
-    contador = contador +1;
-    contadorNumeroDados.push(contador);
-    var Number = Math.floor(Math.random() * carasDado) + 1;
-    Resultados.push(Number);
-    document.write("Resultado: " + Number + "<br>");
+while (counter < diceNumber) {
+    counter = counter +1;
+    counterNumberDices.push(counter);
+    var number = Math.floor(Math.random() * diceFace) + 1;
+    results.push(number);
+    //document.write("Resultado: " + Number + "<br>");
 };
-document.write("Estos son tus numeros " + Resultados + "<br>");
+document.write("Estos son tus numeros " + results + "<br>");
 
-contadorNumeroDados.forEach(function(contadorNumeroDado) {
-    Resultados.forEach(function(Resultado) {
-        if (Resultado == contadorNumeroDado) {
-            conteoActual = conteoActual + 1;
-            resultadoActual = Resultado;
+counterNumberDices.forEach(function(counterNumberDice) {
+    results.forEach(function(result) {
+        if (result == counterNumberDice) {
+            currentCounter = currentCounter + 1;
+            currentResult = result;
         }
     });
-    if (conteoActual != 0){
-        document.write("Tienes " + conteoActual + " resultados de " + resultadoActual + "<br>");
-        conteoActual = 0;
+    if (currentCounter != 0){
+        document.write("Tienes " + currentCounter + " resultados de " + currentResult + "<br>");
+        currentCounter = 0;
     }
 });
